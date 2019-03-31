@@ -11,7 +11,11 @@ public class Biblioteca {
 
 	/*
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+<<<<<<< HEAD
 	 * 			      Multiplicação de matrizes 
+=======
+	 * 		    MultiplicaÃ§Ã£o de matrizes 
+>>>>>>> branch 'master' of https://github.com/Elthonferreira/Computacao-Grafica.git
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	 */
 	public static double[][] multiplicar_matriz(double m1[][], double m2[][]) {
@@ -33,15 +37,24 @@ public class Biblioteca {
 		int colunam2 = m2[0].length;
 
 		if (linham2 != colunam1) {
+<<<<<<< HEAD
 			System.out.println("O número de colunas da matriz 1, tem que ser igual"
 					+ " ao número de linhas da matriz 2. \nTente novamente!");
+=======
+			System.out.println("O nÃºmero de colunas da matriz 1, tem que ser igual"
+					+ "ao nÃºmero de linhas da matriz 2. \nTente novamente!");
+>>>>>>> branch 'master' of https://github.com/Elthonferreira/Computacao-Grafica.git
 			System.exit(0);
 		}
 
 		//double m1[][] = new double[linham1][colunam1];
 		//double m2[][] = new double[linham2][colunam2];
 
+<<<<<<< HEAD
 		/*// Adição dos valores na matriz 1
+=======
+		// AdiÃ§Ã£o dos valores na matriz 1
+>>>>>>> branch 'master' of https://github.com/Elthonferreira/Computacao-Grafica.git
 		System.out.println("Informe os valores da Matriz 1.");
 		for (i = 0; i < linham1; i++) {
 			for (j = 0; j < colunam1; j++) {
@@ -50,7 +63,7 @@ public class Biblioteca {
 			}
 		}
 
-		// Adição dos valores na matriz 2
+		// AdiÃ§Ã£o dos valores na matriz 2
 		System.out.println("Informe os valores da Matriz 2.");
 		for (i = 0; i < linham2; i++) {
 			for (j = 0; j < colunam2; j++) {
@@ -63,9 +76,15 @@ public class Biblioteca {
 		double aux = 0;
 		int x = 0;
 
+<<<<<<< HEAD
 		// Multiplicação
 		for (i = 0; i < linham1; i++) {
 			for (j = 0; j < colunam2; j++) {
+=======
+		// MultiplicaÃ§Ã£o
+		for (i = 0; i < colunam3; i++) {
+			for (j = 0; j < linham3; j++) {
+>>>>>>> branch 'master' of https://github.com/Elthonferreira/Computacao-Grafica.git
 				m3[i][j] = 0;
 				for (x = 0; x < linham2; x++) {
 					aux = aux + (m1[i][x] * m2[x][j]);
@@ -91,7 +110,7 @@ public class Biblioteca {
 
 	/*
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
-	 * 		Subtração de pontos 3D (retorna um vetor 3D)
+	 * 		SubtraÃ§Ã£o de pontos 3D (retorna um vetor 3D)
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	 */
 
@@ -149,12 +168,12 @@ public class Biblioteca {
 	
 	/*
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-	 * 				 Normalização de um vetor 3D 
-	 * 			 (retorna vetor 3D com norma unitária)
+	 * 				 NormalizaÃ§Ã£o de um vetor 3D 
+	 * 			 (retorna vetor 3D com norma unitÃ¡ria)
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	 */
 	
-	public static double[] normalização_vetor(double v[]) {
+	public static double[] normalizaÃ§Ã£o_vetor(double v[]) {
 		
 		double v1 [] = new double [3];
 		v1 [0] = (v[0])/norma_vetor(v);
@@ -165,8 +184,8 @@ public class Biblioteca {
 	
 	/*
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-	 *    Calcular coordenada baricêntrica de um ponto 2D  com 
-	 *        relação a outros três pontos 2D não-colineares
+	 *    Calcular coordenada baricÃªntrica de um ponto 2D  com 
+	 *        relaÃ§Ã£o a outros trÃªs pontos 2D nÃ£o-colineares
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	 */
 	
@@ -180,8 +199,8 @@ public class Biblioteca {
 	/*
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	 *    Calcular coordenada cartesiana de um ponto 2D a partir 
-	 *       de sua coordenada baricêntrica com relação a outros
-	 *     			três pontos 2D não-colineares.
+	 *       de sua coordenada baricÃªntrica com relaÃ§Ã£o a outros
+	 *     			trÃªs pontos 2D nÃ£o-colineares.
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	 */
 	
