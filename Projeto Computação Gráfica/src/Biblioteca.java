@@ -176,9 +176,9 @@ public class Biblioteca {
 		double b = p2[0] - p3[0];
 		double c = p1[1] - p3[1];
 		double d = p2[1] - p3[1];
-		double det = 1/(a*d-b*c);
+		double det = 1/((a * d) - (b * c));
 		double m1[][] = {{det*d, det*(-b)}, {det*(-c), det*a}};
-		double m2[][] = {{p0[0]-p3[0]}, {p0[1]-p3[1]}};
+		double m2[][] = {{p0[0] - p3[0]}, {p0[1] - p3[1]}};
 		m2 = multiplicar_matriz(m1, m2);
 		double coord [] = {m2[0][0], m2[1][0], 1 - m2[0][0] - m2[1][0]};
 		return coord;	
@@ -192,11 +192,11 @@ public class Biblioteca {
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	 */
 	
-	public static double[] coord_carte(double v[]) {
+	public static double[] coord_carte(double pbar[], double p0[], double p1[], double p2[]) {
 		
-		double v1 [] = new double [0];
-		// TO DO
-		return v1;		
+		double[] coord = {(pbar[0] * p0[0]) + (pbar[1] * p1[0]) + (pbar[2] * p2[0]),
+						  (pbar[0] * p0[1]) + (pbar[1] * p1[1]) + (pbar[2] * p2[1])};
+		return coord;
 	}
 
 }
