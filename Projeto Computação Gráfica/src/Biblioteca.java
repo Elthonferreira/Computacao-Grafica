@@ -3,38 +3,45 @@ import java.util.Scanner;
 public class Biblioteca {
 
 	public static void main(String args[]) {
-		multiplicar_matriz();
+		double m1[][] = {{1,2,3}, {4,5,6}};
+		double m2[][] = {{7,8,2}, {2,9,10}, {2, 11,12}};
+ 		multiplicar_matriz(m1, m2);
 		
 	}
 
 	/*
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-	 * 			     testse Multiplicação de matrizes 
+	 * 			      Multiplicação de matrizes 
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	 */
-	public static void multiplicar_matriz() {
+	public static double[][] multiplicar_matriz(double m1[][], double m2[][]) {
 
-		Scanner ler = new Scanner(System.in);
+		//Scanner ler = new Scanner(System.in);
 		int i = 0, j = 0;
-		System.out.print("Quantidade de linhas da Matriz 1: ");
+		/*System.out.print("Quantidade de linhas da Matriz 1: ");
 		int linham1 = ler.nextInt();
 		System.out.print("Quantidade de colunas da Matriz 1: ");
 		int colunam1 = ler.nextInt();
 		System.out.print("Quantidade de linhas da Matriz 2: ");
 		int linham2 = ler.nextInt();
 		System.out.print("Quantidade de colunas da Matriz 2: ");
-		int colunam2 = ler.nextInt();
+		int colunam2 = ler.nextInt();*/
+		
+		int linham1 = m1.length;
+		int linham2 = m2.length;
+		int colunam1 = m1[0].length;
+		int colunam2 = m2[0].length;
 
 		if (linham2 != colunam1) {
 			System.out.println("O número de colunas da matriz 1, tem que ser igual"
-					+ "ao número de linhas da matriz 2. \nTente novamente!");
+					+ " ao número de linhas da matriz 2. \nTente novamente!");
 			System.exit(0);
 		}
 
-		double m1[][] = new double[linham1][colunam1];
-		double m2[][] = new double[linham2][colunam2];
+		//double m1[][] = new double[linham1][colunam1];
+		//double m2[][] = new double[linham2][colunam2];
 
-		// Adição dos valores na matriz 1
+		/*// Adição dos valores na matriz 1
 		System.out.println("Informe os valores da Matriz 1.");
 		for (i = 0; i < linham1; i++) {
 			for (j = 0; j < colunam1; j++) {
@@ -50,17 +57,15 @@ public class Biblioteca {
 				System.out.print("m2[" + i + "]" + "[" + j + "]: ");
 				m2[i][j] = ler.nextDouble();
 			}
-		}
+		}*/
 
-		int linham3 = linham1;
-		int colunam3 = colunam2;
-		double m3[][] = new double[linham3][colunam3];
+		double m3[][] = new double[linham1][colunam2];
 		double aux = 0;
 		int x = 0;
 
 		// Multiplicação
-		for (i = 0; i < colunam3; i++) {
-			for (j = 0; j < linham3; j++) {
+		for (i = 0; i < linham1; i++) {
+			for (j = 0; j < colunam2; j++) {
 				m3[i][j] = 0;
 				for (x = 0; x < linham2; x++) {
 					aux = aux + (m1[i][x] * m2[x][j]);
@@ -73,14 +78,15 @@ public class Biblioteca {
 		// Imprime resultado
 		System.out.println("\n");
 		boolean change = false;
-		for (i = 0; i < colunam3; i++) {
-			for (j = 0; j < linham3; j++) {
+		for (i = 0; i < linham1; i++) {
+			for (j = 0; j < colunam2; j++) {
 				if (change == true)  {System.out.println("\n");}		
-				System.out.printf("%.2f ", m3[i][j]);
+				System.out.printf("[%.2f] ", m3[i][j]);
 				change = false;
 			}
 			change = true;
 		}
+		return m3;
 	}
 
 	/*
