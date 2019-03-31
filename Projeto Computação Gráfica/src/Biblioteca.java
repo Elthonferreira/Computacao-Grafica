@@ -74,18 +74,6 @@ public class Biblioteca {
 				aux = 0;
 			}
 		}
-	
-		// Imprime resultado
-		System.out.println("\n");
-		boolean change = false;
-		for (i = 0; i < linham1; i++) {
-			for (j = 0; j < colunam2; j++) {
-				if (change == true)  {System.out.println("\n");}		
-				System.out.printf("[%.2f] ", m3[i][j]);
-				change = false;
-			}
-			change = true;
-		}
 		return m3;
 	}
 
@@ -126,12 +114,11 @@ public class Biblioteca {
 	 */
 	
 	public static double[] prod_vetorial(double v1[], double v2[]) {
-		double v3 [] = new double [v1.length];
 		
-		v3[0] = (v1[1]*v2[2]) - (v1[2]*v2[1]);
-		v3[1] = (v1[2]*v2[0]) - (v1[0]*v2[2]);
-		v3[2] = (v1[0]*v2[1]) - (v1[1]*v2[0]);
-		
+		double v3 [] = new double [v1.length];		
+		v3[0] = (v1[1] * v2[2]) - (v1[2] * v2[1]);
+		v3[1] = (v1[2] * v2[0]) - (v1[0] * v2[2]);
+		v3[2] = (v1[0] * v2[1]) - (v1[1] * v2[0]);	
 		return v3;
 	}
 
@@ -197,6 +184,24 @@ public class Biblioteca {
 		double[] coord = {(pbar[0] * p0[0]) + (pbar[1] * p1[0]) + (pbar[2] * p2[0]),
 						  (pbar[0] * p0[1]) + (pbar[1] * p1[1]) + (pbar[2] * p2[1])};
 		return coord;
+	}
+	
+	public static void imprime_matriz(double m1[][]) {
+		System.out.println("\n");
+		for (int i = 0; i < m1.length; i++) {
+			for (int j = 0; j < m1.length; j++) {
+				System.out.printf("[%.2f] ", m1[i][j]);
+			}
+			System.out.println("\n");
+		}
+	}
+	
+	public static void imprime_vetor(double v1[]) {
+		System.out.println("\n");
+		for (int i = 0; i < v1.length; i++) {
+			System.out.printf("[%.2f] ", v1[i]);
+		}
+		System.out.println("\n");
 	}
 
 }
