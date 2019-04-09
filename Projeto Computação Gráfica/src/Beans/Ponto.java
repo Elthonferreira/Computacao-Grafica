@@ -3,9 +3,9 @@ package Beans;
 public class Ponto {
 	
 	// Atributos
-	private double x;
-	private double y;
-	private double z;
+	public double x;
+	public double y;
+	public double z;
 	
 	// Construtor
 	public Ponto(double x, double y, double z) {
