@@ -4,11 +4,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import Beans.Ponto;
+import Beans.Salvar;
 import Beans.Triangulo;
 
 public class Desenhos {
 
-	public static void le_arquivo (String nome_arquivo) throws IOException {
+	public static Salvar le_arquivo (String nome_arquivo) throws IOException {
 		
 		// Leitura dos arquivos
 		String path = "formas/" + nome_arquivo + ".byu";
@@ -38,7 +39,10 @@ public class Desenhos {
 			Triangulo t = new Triangulo(pontos.get(Integer.parseInt(aux2[0]) - 1), 
 										pontos.get(Integer.parseInt(aux2[1]) - 1),
 										pontos.get(Integer.parseInt(aux2[2]) - 1));
+			triangulos.add(t);
 		}
+		Salvar save = new Salvar(pontos, triangulos);
+		return save;
 	}
 		
 	public static void main (String args[]) {
