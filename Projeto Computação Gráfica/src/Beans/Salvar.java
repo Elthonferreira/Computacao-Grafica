@@ -7,9 +7,9 @@ public class Salvar {
 	public ArrayList<Ponto> pontos;
 	public ArrayList<Triangulo> triangulos;
 	
-	public Salvar() {
-		this.pontos = new ArrayList<>();
-		this.triangulos = new ArrayList<>();
+	public Salvar(ArrayList<Ponto> pontos, ArrayList<Triangulo> triangulos) {
+		this.pontos = pontos;
+		this.triangulos = triangulos;
 	}
 	
 	
