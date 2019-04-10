@@ -42,7 +42,7 @@ public class Resultados extends Biblioteca{
 	System.out.print("Letra f) ");
 	imprime_vetor(normalização_vetor(v2));
 	
-	/* Resultado norma (Letra g) */
+	/* Resultado coord_bari (Letra g) */
 	System.out.println("---------------------------------------------\n");
 	double b1 [] = {-0.25, 0.75};
 	double b2 [] = {-1.0, 1.0};
@@ -51,7 +51,7 @@ public class Resultados extends Biblioteca{
 	System.out.print("Letra g) ");
 	imprime_vetor(coord_bari(b1, b2, b3, b4));	
 	
-	/* Resultado norma (Letra h) */
+	/* Resultado coord_carte (Letra h) */
 	System.out.println("---------------------------------------------\n");
 	double c1 [] = {0.5, 0.25, 0.25};
 	double c2 [] = {-1.0, 1.0};
