@@ -14,4 +14,8 @@ public class Ponto {
 		this.z = z;
 	}
 	
+	public Ponto() {
+		
+	}
+	
 }

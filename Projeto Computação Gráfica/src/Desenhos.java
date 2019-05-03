@@ -16,7 +16,7 @@ public class Desenhos {
 		BufferedReader leitor = new BufferedReader(new FileReader(path)); // Leitor
 
 		String aux = leitor.readLine(); // Lê valores e guarda no vetor aux
-		String aux2[] = aux.split(" "); // Separa com espaços e guarda no vetor aux2
+		String aux2[] = aux.split(" "); // Separa com espaços e guardta no vetor aux2
 		//System.out.println("" + aux2[0] + "\n" + aux2[1]);
 		int qtd_pontos = Integer.parseInt(aux2[0]); 
 		int qtd_triangulos = Integer.parseInt(aux2[1]);
