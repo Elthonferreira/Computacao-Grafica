@@ -1,12 +1,26 @@
 package Projeto;
+
+import java.io.IOException;
+
+import Beans.Camera;
+
 public class Biblioteca {
 
-	public static void main(String args[]) {
+	public static void main(String args[]) throws IOException {
 		double m1[][] = {{1,2,3}, {4,5,6}};
 		double m2[][] = {{7,8,2}, {2,9,10}, {2, 11,12}};
- 		multiplicar_matriz(m1, m2);
+ 		//multiplicar_matriz(m1, m2);
+		
+		Camera cam2 = new Camera("camera2");
+		cam2.ortogonalizar();
+		cam2.normalizarCam();
+		
+		System.out.println(cam2);
+		
 		
 	}
+	
+	
  
 	/*
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -208,9 +222,9 @@ public class Biblioteca {
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	 */
 	
-	public static double[] trasformador_coords(double v[]) {
+	//public static double[] trasformador_coords(double v[]) {
 		
-	}
+	//}
 	
 	public static void imprime_matriz(double m1[][]) {
 		System.out.println("\n");

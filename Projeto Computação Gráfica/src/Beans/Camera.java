@@ -72,9 +72,22 @@ public class Camera {
 	}
 	
 	public void normalizarCam() {
-		Biblioteca.normalização_vetor(v);
-		Biblioteca.normalização_vetor(n);
-		Biblioteca.normalização_vetor(u);
+		this.v = Biblioteca.normalização_vetor(v);
+		this.n = Biblioteca.normalização_vetor(n);
+		this.u = Biblioteca.normalização_vetor(u);
+	}
+	
+	@Override
+	public String toString() {
+		String str = "";
+		str += "C ["+c.x+"]["+c.y+"]["+c.z+"]\n";
+		str += "U ["+u[0]+"]["+u[1]+"]["+u[2]+"]\n";
+		str += "V ["+v[0]+"]["+v[1]+"]["+v[2]+"]\n";
+		str += "N ["+n[0]+"]["+n[1]+"]["+n[2]+"]\n";
+		str += "D "+d+"\n";
+		str += "Hx "+hx+"\n";
+		str += "Hy "+hy+"\n";
+		return str;
 	}
 
 	public static void main(String[] args) throws IOException {
