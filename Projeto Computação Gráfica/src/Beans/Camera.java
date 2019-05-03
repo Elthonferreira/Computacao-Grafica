@@ -3,6 +3,7 @@ package Beans;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import Projeto.Biblioteca;
 
 public class Camera {
 	
@@ -58,17 +59,27 @@ public class Camera {
 		
 		hy = Double.parseDouble(aux2[0]);
 		
-			System.out.println("c.x = " + c.x + "  c.y = " + c.y + "  c.z = " + c.z +
-					"\nn[0] = " + n[0] + "  n[1] = " + n[1] + "  n[2] = " + n[2] + 
-					"\nv[0] = " + v[0] + "  v[1] = " + v[1] + "  v[2] = " + v[2] + 
-					"\nd = " + d + "\nhx = " + hx + "\nhy = " + hy);
+		// Testando
+			/*System.out.println("c.x = " + c.x + "  c.y = " + c.y + "  c.z = " + c.z +
+							   "\nn[0] = " + n[0] + "  n[1] = " + n[1] + "  n[2] = " + n[2] + 
+							   "\nv[0] = " + v[0] + "  v[1] = " + v[1] + "  v[2] = " + v[2] + 
+							   "\nd = " + d + "\nhx = " + hx + "\nhy = " + hy);*/
+	}
+	
+	public void ortogonalizar() {
+		this.v = Biblioteca.sub_pontos3d(v, Biblioteca.multiplicacao_escalar(n, (Biblioteca.prod_escalar(v, n)/Biblioteca.prod_escalar(n, n))));
+		this.u = Biblioteca.prod_vetorial(n, v);
+	}
+	
+	public void normalizarCam() {
+		Biblioteca.normalização_vetor(v);
+		Biblioteca.normalização_vetor(n);
+		Biblioteca.normalização_vetor(u);
 	}
 
 	public static void main(String[] args) throws IOException {
 	//	ler_arquivo("camera");
-		String separator = System.getProperty("file.separator");
 		Camera cam = new Camera("camera");
-		System.out.println();
 	}
 
 }

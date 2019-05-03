@@ -6,11 +6,11 @@ public class Salvar {
 
 	// Atributos
 	public ArrayList<Ponto> pontos;
-	public ArrayList<Triangulo> triangulos;
+	public ArrayList<int []> indice;
 	
 	// Construtor
-	public Salvar(ArrayList<Ponto> pontos, ArrayList<Triangulo> triangulos) {
+	public Salvar(ArrayList<Ponto> pontos, ArrayList<int []> indice) {
 		this.pontos = pontos;
-		this.triangulos = triangulos;
+		this.indice = indice;
 	}
 }

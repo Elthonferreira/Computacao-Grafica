@@ -1,5 +1,4 @@
-import java.util.Scanner;
-
+package Projeto;
 public class Biblioteca {
 
 	public static void main(String args[]) {
@@ -8,7 +7,7 @@ public class Biblioteca {
  		multiplicar_matriz(m1, m2);
 		
 	}
-
+ 
 	/*
 	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	 * 			      Multiplicação de matrizes 
@@ -148,6 +147,22 @@ public class Biblioteca {
 		v1 [1] = (v[1])/norma_vetor(v);
 		v1 [2] = (v[2])/norma_vetor(v);
 		return v1;		
+	}
+	
+	/*
+	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	 * 				 Multiplicação por escalar 
+	 * 			 		(Retorna um vetor)
+	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	 */
+	
+	public static double[] multiplicacao_escalar(double v[], double x) {
+		
+		double v1 [] = new double [3];
+		v1 [0] =  v[0] * x;
+		v1 [1] =  v[1] * x;
+		v1 [2] =  v[2] * x;
+		return v1;	 	
 	}
 	
 	/*

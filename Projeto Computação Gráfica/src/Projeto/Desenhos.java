@@ -1,3 +1,4 @@
+package Projeto;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -22,7 +23,7 @@ public class Desenhos {
 		int qtd_triangulos = Integer.parseInt(aux2[1]);
 
 		ArrayList<Ponto> pontos = new ArrayList<>();
-		ArrayList<Triangulo> triangulos = new ArrayList<>();
+		ArrayList<int []> indice = new ArrayList<>();
 
 		// Adicionando os pontos no array de pontos
 		for (int i = 0; i < qtd_pontos; i++) {
@@ -38,12 +39,11 @@ public class Desenhos {
 		for (int i = 0; i < qtd_triangulos; i++) {
 			aux = leitor.readLine();
 			aux2 = aux.split(" ");
-			Triangulo t = new Triangulo(pontos.get(Integer.parseInt(aux2[0]) - 1),
-										pontos.get(Integer.parseInt(aux2[1]) - 1), 
-										pontos.get(Integer.parseInt(aux2[2]) - 1));
-			triangulos.add(t);
+			indice.add(new int[] {Integer.parseInt(aux2[0]) - 1,
+								  Integer.parseInt(aux2[1]) - 1,
+								  Integer.parseInt(aux2[2]) - 1});
 		}
-		Salvar save = new Salvar(pontos, triangulos);
+		Salvar save = new Salvar(pontos, indice);
 		return save;
 	}
 	// Função de normalização
