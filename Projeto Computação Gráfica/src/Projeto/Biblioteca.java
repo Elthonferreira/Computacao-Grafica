@@ -201,6 +201,17 @@ public class Biblioteca {
 		return coord;
 	}
 	
+	/*
+	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	 * 				 Transformador de coordenadas
+	 * 			 		(Retorna um vetor)
+	 * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	 */
+	
+	public static double[] trasformador_coords(double v[]) {
+		
+	}
+	
 	public static void imprime_matriz(double m1[][]) {
 		System.out.println("\n");
 		for (int i = 0; i < m1.length; i++) {
